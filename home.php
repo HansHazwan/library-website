@@ -21,6 +21,12 @@ if ($result->num_rows > 0) {
     die('Something wrong.');
 }
 
+if ($_SERVER['REQUEST_METHOD'] == 'POST') {
+    session_destroy();
+    header("Location: index.php");
+    exit();
+}
+
 ?>
 
 <html>
@@ -42,7 +48,10 @@ if ($result->num_rows > 0) {
                 ?>
             </div>
             <div class="content">
-                <h1>Under Development</h1>
+                <h1>Under Development ;) </h1>
+                <form action="" method="POST">
+                    <button type="submit">Sign Out</button>
+                </form>
             </div>
         </main>
     </body>

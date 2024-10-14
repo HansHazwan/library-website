@@ -27,4 +27,14 @@ main {
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-direction: column;
+}
+
+form button {
+    padding: 6px;
+    margin-top: 4px;
+    border-radius: 4px;
+    border: none;
+    background-color: red;
+    color: white;
 }
